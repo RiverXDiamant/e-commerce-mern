@@ -1,11 +1,17 @@
+// import styles from "./App.module.css";
+import HomePage from "../src/pages/HomePage";
+import NavBar from "./components/NavBar";
+
+// css
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <h1>APP</h1>
+      <header>
+        <NavBar />
+      </header>
+      <HomePage />
     </div>
   );
 }
-
-export default App;
