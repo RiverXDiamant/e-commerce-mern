@@ -15,3 +15,6 @@ export default function App() {
     </div>
   );
 }
+// look up using Sign Up component to login
+// Styling in react for main page
+// create dummy links for the different categories
