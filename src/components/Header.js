@@ -1,8 +1,14 @@
+// components
+
+import LeftSection from "../components/LeftSection";
+import RightSection from "../components/RightSection";
+
 export default function Header() {
   return (
     <>
       <section className="header">
-        <h1>header</h1>
+        <LeftSection />
+        <RightSection />
       </section>
     </>
   );

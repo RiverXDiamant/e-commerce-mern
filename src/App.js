@@ -9,7 +9,7 @@ import Kids from "./pages/Kids";
 import SignUpForm from "./components/SignUpForm";
 
 // css
-import "./App.css";
+// import "./App.css";
 
 export default function App() {
   return (

@@ -6,7 +6,7 @@ export default function NavBar() {
     <>
       <div class="nav-bar">
         <div class="logo">
-          <a href="/homepage">
+          <a href="/">
             <img
               src="https://images.vans.com/is/image/VansBrand/ftb-modal-logo?wid=100&fmt=png-alpha"
               alt="foot the bill vans logo"
