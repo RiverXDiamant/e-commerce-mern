@@ -6,7 +6,7 @@ import NavBar from "./components/NavBar";
 import Mens from "./pages/Mens";
 import Womens from "./pages/Womens";
 import Kids from "./pages/Kids";
-import SignUpForm from "./components/SignUpForm";
+import AuthPage from "./pages/AuthPage";
 
 // css
 import "./index.scss";
@@ -22,7 +22,7 @@ export default function App() {
           <Route path="/mens" element={<Mens />} />
           <Route path="/womens" element={<Womens />} />
           <Route path="/kids" element={<Kids />} />
-          <Route path="/login" element={<SignUpForm />} />
+          <Route path="/login" element={<AuthPage />} />
         </Routes>
       </div>
     </div>

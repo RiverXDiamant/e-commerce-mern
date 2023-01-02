@@ -1,44 +1,103 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { Component } from "react";
+import { signUp } from "../utilities/users-service";
 
-export default function SignUpForm() {
-  return (
-    <>
-      <div className="signUpForm">
-        <div class="form-box">
+export default class SignUpForm extends Component {
+  state = {
+    name: "",
+    email: "",
+    password: "",
+    confirm: "",
+    error: "",
+  };
+
+  handleChange = (evt) => {
+    this.setState({
+      [evt.target.name]: evt.target.value,
+      error: "",
+    });
+  };
+
+  handleSubmit = async (evt) => {
+    // Prevent form from being submitted to the server
+    evt.preventDefault();
+    try {
+      // We don't want to send the 'error' or 'confirm' property,
+      //  so let's make a copy of the state object, then delete them
+      const formData = { ...this.state };
+      delete formData.error;
+      delete formData.confirm;
+      // The promise returned by the signUp service method
+      // will resolve to the user object included in the
+      // payload of the JSON Web Token (JWT)
+      const user = await signUp(formData);
+      this.props.setUser(user);
+    } catch {
+      this.setState({ error: "Sign Up Failed - Try Again" });
+    }
+  };
+
+  render() {
+    const disable = this.state.password !== this.state.confirm;
+    return (
+      <div className="container">
+        <div className="form-box">
           <h1 id="title">Sign Up</h1>
-          <form>
-            <div class="input-group">
-              <div class="input-field" id="nameField">
-                <i class="fa-solid fa-user"></i>
-                <input type="text" placeholder="Name" />
+          <form autoComplete="off" onSubmit={this.handleSubmit}>
+            <div className="input-group">
+              <div className="input-field" id="nameField">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  value={this.state.name}
+                  onChange={this.handleChange}
+                  required
+                />
               </div>
 
-              <div class="input-field">
-                <i class="fa-solid fa-envelope"></i>
-                <input type="email" placeholder="Email" />
+              <div className="input-field">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  value={this.state.email}
+                  onChange={this.handleChange}
+                  required
+                />
               </div>
 
-              <div class="input-field">
-                <i class="fa-solid fa-lock"></i>
-                <input type="password" placeholder="Password" />
+              <div className="input-field">
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  value={this.state.password}
+                  onChange={this.handleChange}
+                  required
+                />
               </div>
-              <p>
-                Forgot Password <Link to="#">Click Here</Link>
-              </p>
+
+              <div className="input-field">
+                <input
+                  type="password"
+                  name="confirm"
+                  placeholder="Confirm"
+                  value={this.state.confirm}
+                  onChange={this.handleChange}
+                  required
+                />
+              </div>
             </div>
 
-            <div class="btn-field">
-              <button type="button" id="signupBtn">
-                Sign Up
-              </button>
-              <button type="button" id="signinBtn" class="disable">
-                Sign In
+            <div className="btn-field">
+              <button type="submit" id="signupBtn" disabled={disable}>
+                SIGN UP
               </button>
             </div>
           </form>
         </div>
+        <p className="error-message">&#160;{this.state.error}</p>
       </div>
-    </>
-  );
+    );
+  }
 }
