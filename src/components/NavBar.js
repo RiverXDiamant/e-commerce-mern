@@ -1,12 +1,21 @@
 import { Link } from "react-router-dom";
 
+// imported styling
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  solid,
+  regular,
+  brands,
+  icon,
+} from "@fortawesome/fontawesome-svg-core/import.macro";
+
 export default function NavBar() {
   return (
     // want to implement logout functionality that toggles from "Sign Up" to "Log out" once the user is signed in.
     <>
       <div class="nav-bar">
         <div class="logo">
-          <a href="index.html">
+          <a href="/homepage">
             <img
               src="https://images.vans.com/is/image/VansBrand/ftb-modal-logo?wid=100&fmt=png-alpha"
               alt="foot the bill vans logo"
@@ -16,7 +25,7 @@ export default function NavBar() {
         <div className="menu" role="navigation">
           <ul>
             <li>
-              <Link to="/">HOME</Link>
+              <Link to="/homepage">HOME</Link>
             </li>
             &nbsp; | &nbsp;
             <li>
@@ -54,17 +63,21 @@ export default function NavBar() {
         </div>
         <div class="icons" role="navigation">
           <ul>
-            <Link to="/login">Login</Link>
             <li>
-              <a href="#" class="fa fa-sign-in">
-                &nbsp;Login
+              <i class="fa fa-sign-in"></i>
+              <Link to="/login"> &nbsp;Login</Link>
+            </li>
+            <li>
+              <a href="">
+                <i class="fa fa-search"></i>
               </a>
+              &nbsp;Search
             </li>
             <li>
-              <a href="#" class="fa fa-search"></a>&nbsp;Search
-            </li>
-            <li>
-              <a href="#" class="fa fa-shopping-cart"></a>&nbsp;Cart
+              <a href="">
+                <i class="fa fa-shopping-cart"></i>
+              </a>
+              &nbsp;Cart
             </li>
           </ul>
         </div>
