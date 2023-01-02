@@ -1,14 +1,5 @@
 import { Link } from "react-router-dom";
 
-// imported styling
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  solid,
-  regular,
-  brands,
-  icon,
-} from "@fortawesome/fontawesome-svg-core/import.macro";
-
 export default function NavBar() {
   return (
     // want to implement logout functionality that toggles from "Sign Up" to "Log out" once the user is signed in.
@@ -25,7 +16,7 @@ export default function NavBar() {
         <div className="menu" role="navigation">
           <ul>
             <li>
-              <Link to="/homepage">HOME</Link>
+              <Link to="/">HOME</Link>
             </li>
             &nbsp; | &nbsp;
             <li>
@@ -68,15 +59,11 @@ export default function NavBar() {
               <Link to="/login"> &nbsp;Login</Link>
             </li>
             <li>
-              <a href="">
-                <i class="fa fa-search"></i>
-              </a>
+              <i class="fa fa-search"></i>
               &nbsp;Search
             </li>
             <li>
-              <a href="">
-                <i class="fa fa-shopping-cart"></i>
-              </a>
+              <i class="fa fa-shopping-cart"></i>
               &nbsp;Cart
             </li>
           </ul>
