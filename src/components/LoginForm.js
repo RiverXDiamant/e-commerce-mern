@@ -50,7 +50,7 @@ export default function LoginForm({ setUser }) {
                 <input
                   type="password"
                   name="password"
-                  placeholder="password"
+                  placeholder="Password"
                   value={credentials.password}
                   onChange={handleChange}
                   required
@@ -60,13 +60,14 @@ export default function LoginForm({ setUser }) {
 
             <div className="btn-field">
               <button type="submit" id="signupBtn">
-                SIGN IN
+                SUBMIT
               </button>
             </div>
           </form>
+          <br />
+          <p className="error-message">&nbsp;{error}</p>
         </div>
       </div>
-      <p className="error-message">&nbsp;{error}</p>
     </div>
   );
 }
