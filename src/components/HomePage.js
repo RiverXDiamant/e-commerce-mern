@@ -1,12 +1,10 @@
 // components
-import Header from "./Header";
+import Header from "./Header/Header";
 
 export default function HomePage() {
   return (
     <>
-      <div className="home-container">
-        <Header />
-      </div>
+      <Header />
     </>
   );
 }

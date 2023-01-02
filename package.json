@@ -17,12 +17,13 @@
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.8.2",
     "morgan": "^1.10.0",
+    "node-sass": "^7.0.3",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.6.1",
     "react-scripts": "^5.0.1",
     "serve-favicon": "^2.5.0",
+    "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -50,5 +51,4 @@
       "last 1 safari version"
     ]
   }
-
 }

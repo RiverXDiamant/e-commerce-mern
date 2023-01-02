@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
+import * as userService from "../utilities/users-service";
 
-export default function NavBar() {
+export default function NavBar({ name, setUser }) {
+  function handleLogout() {
+    // Delegate to the users-service
+    userService.logOut();
+    setUser(null);
+  }
+
   return (
-    // want to implement logout functionality that toggles from "Sign Up" to "Log out" once the user is signed in.
     <>
       <div class="nav-bar">
         <div class="logo">
@@ -52,6 +58,9 @@ export default function NavBar() {
             </li>
           </ul>
         </div>
+        <div className="greeting">
+          <p>Welcome, {name}</p>
+        </div>
         <div class="icons" role="navigation">
           <ul>
             <li>
@@ -65,6 +74,12 @@ export default function NavBar() {
             <li>
               <i class="fa fa-shopping-cart"></i>
               &nbsp;Cart
+            </li>
+            <li>
+              &nbsp;&nbsp;
+              <Link to="" onClick={handleLogout}>
+                Log Out
+              </Link>
             </li>
           </ul>
         </div>

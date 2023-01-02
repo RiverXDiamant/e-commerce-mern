@@ -40,7 +40,7 @@ export default function LeftSection() {
                 <div class="item-img">
                   <img
                     src="./src/img/ftb-baltimore-eubie-blake-shoe.webp"
-                    alt="Foot The Bill customs Vans for business Local Green Atlanta, located in Atlanta, Georgia "
+                    alt="Foot The Bill custom Vans for business Local Green Atlanta, located in Atlanta, Georgia "
                   />
                 </div>
               </div>
@@ -55,7 +55,10 @@ export default function LeftSection() {
             <div class="items">
               <div class="item-three">
                 <div class="item-img">
-                  <img src="./src/img/ftb-portland-milk-t-shoe.webp" alt="" />
+                  <img
+                    src="./src/img/ftb-portland-milk-t-shoe.webp"
+                    alt="Foot The Bill custom Vans for business Milk T, located in Atlanta, Georgia"
+                  />
                 </div>
               </div>
             </div>

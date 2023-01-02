@@ -9,21 +9,22 @@ import Kids from "./pages/Kids";
 import SignUpForm from "./components/SignUpForm";
 
 // css
-// import "./App.css";
+import "./index.scss";
 
 export default function App() {
   return (
     <div className="App">
-      <header>
+      <div className="header">
         <NavBar />
-      </header>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/mens" element={<Mens />} />
-        <Route path="/womens" element={<Womens />} />
-        <Route path="/kids" element={<Kids />} />
-        <Route path="/login" element={<SignUpForm />} />
-      </Routes>
+
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/mens" element={<Mens />} />
+          <Route path="/womens" element={<Womens />} />
+          <Route path="/kids" element={<Kids />} />
+          <Route path="/login" element={<SignUpForm />} />
+        </Routes>
+      </div>
     </div>
   );
 }
