@@ -65,7 +65,7 @@ export default function NavBar({ name, setUser }) {
           <ul>
             <li>
               <i class="fa fa-sign-in"></i>
-              <Link to="/login"> &nbsp;Login</Link>
+              <Link to="/login"> &nbsp;Sign In</Link>
             </li>
             <li>
               <i class="fa fa-search"></i>
@@ -77,7 +77,7 @@ export default function NavBar({ name, setUser }) {
             </li>
             <li>
               &nbsp;&nbsp;
-              <Link to="" onClick={handleLogout}>
+              <Link to="/" onClick={handleLogout}>
                 Log Out
               </Link>
             </li>

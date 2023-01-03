@@ -1,3 +1,9 @@
 export default function Mens() {
-  return <h1>Mens Sneaker Page</h1>;
+  return (
+    <>
+      <div className="otherPage">
+        <h1>Mens Sneaker Page</h1>;
+      </div>
+    </>
+  );
 }

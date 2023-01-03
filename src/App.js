@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import Mens from "./pages/Mens";
 import Womens from "./pages/Womens";
 import Kids from "./pages/Kids";
+// import { getUser } from "./utilities/users-service";
 import AuthPage from "./pages/AuthPage";
 
 // css
