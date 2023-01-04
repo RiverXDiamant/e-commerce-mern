@@ -8,6 +8,7 @@ import Womens from "../Womens";
 import Kids from "../Kids";
 import { getUser } from "../../utilities/users-service";
 import AuthPage from "../AuthPage/AuthPage";
+import NewOrderPage from "../NewOrderPage";
 import UserLogOut from "../../components/UserLogOut";
 
 // css
@@ -26,10 +27,15 @@ export default function App() {
             <Route path="/womens" element={<Womens />} />
             <Route path="/kids" element={<Kids />} />
             <Route path="/*" element={<Navigate to="/" />} />
+            <Route
+              path="/orders/new"
+              element={<NewOrderPage user={user} setUser={setUser} />}
+            />
           </Routes>
         ) : (
           <Routes>
             <Route path="/login" element={<AuthPage setUser={setUser} />} />
+
             <Route
               path="/homepage"
               element={<UserLogOut setUser={setUser} />}
