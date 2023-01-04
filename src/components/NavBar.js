@@ -24,19 +24,19 @@ export default function NavBar({ name, setUser }) {
             <li>
               <Link to="/">HOME</Link>
             </li>
-            &nbsp; | &nbsp;
+            &nbsp; / &nbsp;
             <li>
               <Link to="/mens">MENS</Link>
             </li>
-            &nbsp; | &nbsp;
+            &nbsp; / &nbsp;
             <li>
               <Link to="/womens">WOMENS</Link>
             </li>
-            &nbsp; | &nbsp;
+            &nbsp; / &nbsp;
             <li>
               <Link to="/kids">KIDS</Link>
             </li>
-            &nbsp; | &nbsp;
+            &nbsp; / &nbsp;
             <li>
               <a
                 href="https://www.vans.com/en-us/customs"
@@ -46,7 +46,7 @@ export default function NavBar({ name, setUser }) {
                 CUSTOMS
               </a>
             </li>
-            &nbsp; | &nbsp;
+            &nbsp; / &nbsp;
             <li>
               <a
                 href="https://www.vans.com/en-us/footthebill"
@@ -59,7 +59,7 @@ export default function NavBar({ name, setUser }) {
           </ul>
         </div>
         <div className="greeting">
-          <p>Welcome, {name}</p>
+          <p>Welcome {name}</p>
         </div>
         <div className="icons" role="navigation">
           <ul>
