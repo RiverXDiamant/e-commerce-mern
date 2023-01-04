@@ -1,106 +1,85 @@
-import SocialMedia from "./SocialMedia";
+// components
+import React, { Component } from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 
-// TODO: Use loop on Right Section import component; use React Carousel
+export default class RightSection extends Component {
+  render() {
+    const images = [
+      {
+        name: "Local Green Atlanta",
+        item: "Vans Old Skool",
+        price: "$74.99",
+        img: "https://i.imgur.com/x9R5321.png",
+        alt: "Foot The Bill customs Vans for business Local Green Atlanta, located in Atlanta, Georgia",
+      },
+      {
+        name: "Eubie Blake Cultural Center",
+        item: "Vans Classic Slip-On",
+        price: "$74.99",
+        img: "https://i.imgur.com/jiB0r8U.png",
+        alt: "Foot The Bill customs Vans for business Eubie Blake Cultural Center, located in Baltimore, Maryland",
+      },
+      {
+        name: "Milk + T",
+        item: "Vans Authentic Canvas",
+        price: "$74.99",
+        img: "https://i.imgur.com/rVOVRZx.png",
+        alt: "Foot The Bill customs Vans for business Milk T, located in Portland, Oregon",
+      },
+      {
+        name: "Zabars",
+        item: "Vans Classic Slip-On",
+        price: "$74.99",
+        img: "https://i.imgur.com/niXij6j.png",
+        alt: "Foot The Bill customs Vans for business Zabars, located in New York City",
+      },
+      {
+        name: "Minds Eye Comics",
+        item: "Vans Classic Slip-On",
+        price: "$74.99",
+        img: "https://i.imgur.com/AviwMth.png",
+        alt: "Foot The Bill customs Vans for business Minds Eye Comics, located in Burnsville, Minnesota ",
+      },
+      {
+        name: "Portrait Coffee",
+        item: "Vans Old Skool",
+        price: "$74.99",
+        img: "https://i.imgur.com/XreZIcB.png",
+        alt: "Foot The Bill customs Vans for business Portrait Coffee, located in Atlanta, Georgia",
+      },
+      {
+        name: "Black Genius Art SHow",
+        item: "Vans Sk8-Hi",
+        price: "$74.99",
+        img: "https://i.imgur.com/riJgphs.png",
+        alt: "Foot The Bill customs Vans for business The Black Genius Art Show, located in Baltimore, Maryland",
+      },
+    ];
+    return (
+      <>
+        <div className="right-sec">
+          <div className="carousel-container">
+            <Carousel className="carousel">
+              {
+                // Put the loop inside the Carousel so the loop will wont make multiple copies of the Carousel
+              }
 
-export default function RightSection() {
-  return (
-    <>
-      <div class="right-sec">
-        <div class="ftb-customs">
-          <div>
-            <img
-              src="./src/img/ftb-atlanta-local-green.png"
-              alt="Foot The Bill customs Vans for business Local Green Atlanta, located in Atlanta, Georgia "
-            />
-          </div>
-          <div>
-            <img
-              src="./src/img/ftb-santa-barbara-jensens-guitar.png"
-              alt="Foot The Bill customs Vans for business Jensens Guitar, located in Santa Barbara, California"
-            />
-          </div>
-          <div>
-            <img
-              src="./src/img/ftb-baltimore-black-genuis.png"
-              alt="Foot The Bill customs Vans for business The Black Genius Art Show, located in Baltimore, Maryland"
-            />
-          </div>
-          <div>
-            <img
-              src="./src/img/ftb-newyork-alibi-lounge.png"
-              alt="Foot The Bill customs Vans for business ALibi Lounge, located in New York City"
-            />
-          </div>
-          <div>
-            <img
-              src="./src/img/ftb-portland-milkt.png"
-              alt="Foot The Bill customs Vans for business Milk T, located in Portland, Oregon"
-            />
-          </div>
-          <div>
-            <img
-              src="./src/img/ftb-chicago-madd-rhythms.png"
-              alt="Foot The Bill customs Vans for business Madd Rhythms, located in Chicago, Illinois"
-            />
-          </div>
-          <div>
-            <img
-              src="./src/img/ftb-dc-spacy-cloud.png"
-              alt="Foot The Bill customs Vans for business Spacy Cloud, located in Washington, D.C."
-            />
-          </div>
-          <div>
-            <img
-              src="./src/img/ftb-newyork-zabars.png"
-              alt="Foot The Bill customs Vans for business Zabars, located in New York City"
-            />
-          </div>
-          <div>
-            <img
-              src="./src/img/ftb-cleveland-grogshop.png"
-              alt="Foot The Bill customs Vans for business Grog Shop, located in Cleveland, Ohio"
-            />
-          </div>
-          <div>
-            <img
-              src="./src/img/ftb-ridgeland-mama-natures-juicebar.png"
-              alt="Foot The Bill customs Vans for business Mamas Juice Bar, located in Ridgeland, Mississippi"
-            />
-          </div>
-          <div>
-            <img
-              src="./src/img/ftb-burnsville-midseye-comics.png"
-              alt="Foot The Bill customs Vans for business Minds Eye Comics, located in Burnsville, Minnesota "
-            />
-          </div>
-          <div>
-            <img
-              src="./src/img/ftb-atlanta-portrait-coffee.png"
-              alt="Foot The Bill customs Vans for business Portrait Coffee, located in Atlanta, Georgia"
-            />
-          </div>
-          <div>
-            <img
-              src="./src/img/ftb-chicago-606-records.png"
-              alt="Foot The Bill customs Vans for business 606 Records, located in Chicago, Illinois"
-            />
-          </div>
-          <div>
-            <img
-              src="./src/img/ftb-newyork-nomwah.png"
-              alt="Foot The Bill customs Vans for business Nom Wah, located in New York City"
-            />
-          </div>
-          <div>
-            <img
-              src="./src/img/ftb-baltimore-eubie-blake-culturalcenter.png"
-              alt="Foot The Bill customs Vans for business Eubie Blake Cultural Center, located in Baltimore, Maryland"
-            />
+              {images.map((image) => {
+                const { item, price, img, alt } = image;
+                return (
+                  <>
+                    <div className="img-container">
+                      <img src={`${img}`} alt={`${alt}`} />
+                      <p className="legend">{`${item} | ${price} `}</p>
+                    </div>
+                  </>
+                );
+              })}
+            </Carousel>
           </div>
         </div>
-
-        <SocialMedia />
-      </div>
-    </>
-  );
+      </>
+    );
+  }
 }
