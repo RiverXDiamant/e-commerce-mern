@@ -4,6 +4,8 @@ require("./database");
 const Category = require("../models/category");
 const Item = require("../models/item");
 
+// TODO: Update seed file with hosted images so they can be retrieved from backend
+
 (async function () {
   await Category.deleteMany({});
   const categories = await Category.create([
@@ -15,7 +17,7 @@ const Item = require("../models/item");
   const items = await Item.create([
     {
       name: "Local Green Atlanta",
-      img: "../src/img/ftb-atlanta-local-green.png",
+      img: "https://images.vans.com/is/image/VansBrand/ftb-business-local-green-shirt1?wid=500&fmt=png-alpha",
       category: categories[0],
       price: 74.99,
     },

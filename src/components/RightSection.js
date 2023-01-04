@@ -1,5 +1,7 @@
 import SocialMedia from "./SocialMedia";
 
+// TODO: Use loop on Right Section import component; use React Carousel
+
 export default function RightSection() {
   return (
     <>

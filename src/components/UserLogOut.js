@@ -1,4 +1,4 @@
-import styles from "./UserLogOut.module.css";
+import styles from "../components/UserLogOut.module.css";
 import { logOut } from "../../src/utilities/users-service";
 
 export default function UserLogOut({ user, setUser }) {

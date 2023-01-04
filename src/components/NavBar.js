@@ -61,18 +61,18 @@ export default function NavBar({ name, setUser }) {
         <div className="greeting">
           <p>Welcome, {name}</p>
         </div>
-        <div class="icons" role="navigation">
+        <div className="icons" role="navigation">
           <ul>
             <li>
-              <i class="fa fa-sign-in"></i>
+              <i className="fa fa-sign-in"></i>
               <Link to="/login"> &nbsp;Sign In</Link>
             </li>
             <li>
-              <i class="fa fa-search"></i>
+              <i className="fa fa-search"></i>
               &nbsp;Search
             </li>
             <li>
-              <i class="fa fa-shopping-cart"></i>
+              <i className="fa fa-shopping-cart"></i>
               &nbsp;Cart
             </li>
             <li>
