@@ -1,4 +1,4 @@
-import styles from "../components/UserLogOut.module.css";
+import styles from "./UserLogOut.module.css";
 import { logOut } from "../../src/utilities/users-service";
 
 export default function UserLogOut({ user, setUser }) {
@@ -11,7 +11,7 @@ export default function UserLogOut({ user, setUser }) {
     <div className={styles.UserLogOut}>
       <div>{user.name}</div>
       <div className={styles.email}>{user.email}</div>
-      <button className="btn-sm" onClick={handleLogOut}>
+      <button className="btn-sm" id="signupBtn" onClick={handleLogOut}>
         LOG OUT
       </button>
     </div>

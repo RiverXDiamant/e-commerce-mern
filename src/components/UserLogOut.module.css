@@ -1,0 +1,21 @@
+.UserLogOut {
+  font-size: 2vmin;
+  color: var(--text-light);
+  text-align: center;
+}
+
+.UserLogOut .email {
+  font-size: 15px;
+}
+
+.btn-sm button {
+  flex-basis: 48%;
+  background: crimson;
+  color: #fff;
+  height: 40px;
+  border-radius: 20px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: ease-in;
+}

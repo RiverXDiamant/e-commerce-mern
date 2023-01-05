@@ -9,6 +9,7 @@ import Kids from "../Kids";
 import { getUser } from "../../utilities/users-service";
 import AuthPage from "../AuthPage/AuthPage";
 import NewOrderPage from "../NewOrderPage";
+import MyAccount from "../MyAccount";
 import UserLogOut from "../../components/UserLogOut";
 // import Footer from "../../components/Footer";
 
@@ -32,6 +33,10 @@ export default function App() {
             <Route
               path="/orders/new"
               element={<NewOrderPage user={user} setUser={setUser} />}
+            />
+            <Route
+              path="/orders"
+              element={<MyAccount user={user} setUser={setUser} />}
             />
           </Routes>
         ) : (

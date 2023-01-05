@@ -4,7 +4,7 @@ require("./database");
 const Category = require("../models/category");
 const Item = require("../models/item");
 
-// TODO: Update seed file with hosted images so they can be retrieved from backend
+// Update seed file with hosted images so they can be retrieved from backend - ✔️
 
 (async function () {
   await Category.deleteMany({});

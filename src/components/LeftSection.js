@@ -12,7 +12,7 @@ export default class LeftSection extends Component {
             <div className="left-section">
               <div class="content">
                 <h2>Online</h2>
-                <h1>CUSTOM VANS</h1>
+                <h1>VANS CUSTOM</h1>
                 <h3>STORE</h3>
 
                 <Link to="/orders/new" className="btn">

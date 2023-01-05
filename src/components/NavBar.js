@@ -58,9 +58,7 @@ export default function NavBar({ name, setUser }) {
             </li>
           </ul>
         </div>
-        <div className="greeting">
-          <p>Welcome! {name}</p>
-        </div>
+        <div className="greeting"></div>
         <div className="icons" role="navigation">
           <ul>
             <li>
@@ -73,7 +71,7 @@ export default function NavBar({ name, setUser }) {
             </li>
             <li>
               <i className="fa fa-shopping-cart"></i>
-              &nbsp;Cart
+              <Link to="/orders">&nbsp;My Account</Link>
             </li>
             <li>
               &nbsp;&nbsp;
