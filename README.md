@@ -18,7 +18,7 @@ I created a HTML mockup of the app to use as a guide when implementing it in Rea
 
 Mockup Preview:
 <br/>
-<img src="https://i.imgur.com/m6qHR14.png"/>
+<img src="https://i.imgur.com/QhLltXw.png"/>
 <br/>
 Mockup site:
 <a href="https://riverxdiamant-footthebill-vans.netlify.app/">Vans Store mockup</a>
