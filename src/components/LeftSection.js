@@ -16,7 +16,7 @@ export default class LeftSection extends Component {
                 <h3>STORE</h3>
 
                 <Link to="/orders/new" className="btn">
-                  Buy Now
+                  &nbsp; Buy Now
                 </Link>
               </div>
             </div>

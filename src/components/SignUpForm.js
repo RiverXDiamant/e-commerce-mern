@@ -39,65 +39,63 @@ export default class SignUpForm extends Component {
   render() {
     const disable = this.state.password !== this.state.confirm;
     return (
-      <div className="container">
-        <div className="form-box">
-          <h1 id="title">Sign Up</h1>
-          <form autoComplete="off" onSubmit={this.handleSubmit}>
-            <div className="input-group">
-              <div className="input-field" id="nameField">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  value={this.state.name}
-                  onChange={this.handleChange}
-                  required
-                />
-              </div>
-
-              <div className="input-field">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  value={this.state.email}
-                  onChange={this.handleChange}
-                  required
-                />
-              </div>
-
-              <div className="input-field">
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                  value={this.state.password}
-                  onChange={this.handleChange}
-                  required
-                />
-              </div>
-
-              <div className="input-field">
-                <input
-                  type="password"
-                  name="confirm"
-                  placeholder="Confirm"
-                  value={this.state.confirm}
-                  onChange={this.handleChange}
-                  required
-                />
-              </div>
+      <div className="form-box">
+        <h1 id="title">Sign Up</h1>
+        <form autoComplete="off" onSubmit={this.handleSubmit}>
+          <div className="input-group">
+            <div className="input-field" id="nameField">
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={this.state.name}
+                onChange={this.handleChange}
+                required
+              />
             </div>
 
-            <div className="btn-field">
-              <button type="submit" id="signupBtn" disabled={disable}>
-                SUBMIT
-              </button>
+            <div className="input-field">
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={this.state.email}
+                onChange={this.handleChange}
+                required
+              />
             </div>
-          </form>
-          <br />
-          <p className="error-message">&#160;{this.state.error}</p>
-        </div>
+
+            <div className="input-field">
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                value={this.state.password}
+                onChange={this.handleChange}
+                required
+              />
+            </div>
+
+            <div className="input-field">
+              <input
+                type="password"
+                name="confirm"
+                placeholder="Confirm"
+                value={this.state.confirm}
+                onChange={this.handleChange}
+                required
+              />
+            </div>
+          </div>
+
+          <div className="btn-field">
+            <button type="submit" id="signupBtn" disabled={disable}>
+              SUBMIT
+            </button>
+          </div>
+        </form>
+        <br />
+        <p className="error-message">&#160;{this.state.error}</p>
       </div>
     );
   }

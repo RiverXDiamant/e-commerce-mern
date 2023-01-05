@@ -59,7 +59,7 @@ export default function NavBar({ name, setUser }) {
           </ul>
         </div>
         <div className="greeting">
-          <p>Welcome {name}</p>
+          <p>Welcome! {name}</p>
         </div>
         <div className="icons" role="navigation">
           <ul>

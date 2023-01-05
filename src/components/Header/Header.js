@@ -1,13 +1,11 @@
-import LeftSection from "../../components/LeftSection";
 import RightSection from "../RightSection";
-import Footer from "../Footer";
+import LeftSection from "../LeftSection";
 
 export default function Header() {
   return (
     <>
       <LeftSection />
       <RightSection />
-      <Footer />
     </>
   );
 }

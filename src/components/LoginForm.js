@@ -31,42 +31,40 @@ export default function LoginForm({ setUser }) {
 
   return (
     <div>
-      <div className="container" onSubmit={handleSubmit}>
-        <div className="form-box">
-          <h1 id="title">Sign In</h1>
-          <form autoComplete="off">
-            <div className="input-group">
-              <div className="input-field"></div>
+      <div className="form-box" onSubmit={handleSubmit}>
+        <h1 id="title">Sign In</h1>
+        <form autoComplete="off">
+          <div className="input-group">
+            <div className="input-field"></div>
+            <input
+              type="text"
+              name="email"
+              placeholder="Email"
+              value={credentials.email}
+              onChange={handleChange}
+              required
+            />
+
+            <div className="input-field">
               <input
-                type="text"
-                name="email"
-                placeholder="Email"
-                value={credentials.email}
+                type="password"
+                name="password"
+                placeholder="Password"
+                value={credentials.password}
                 onChange={handleChange}
                 required
               />
-
-              <div className="input-field">
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                  value={credentials.password}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
             </div>
+          </div>
 
-            <div className="btn-field">
-              <button type="submit" id="signupBtn">
-                SUBMIT
-              </button>
-            </div>
-          </form>
-          <br />
-          <p className="error-message">&nbsp;{error}</p>
-        </div>
+          <div className="btn-field">
+            <button type="submit" id="signupBtn">
+              SUBMIT
+            </button>
+          </div>
+        </form>
+        <br />
+        <p className="error-message">&nbsp;{error}</p>
       </div>
     </div>
   );

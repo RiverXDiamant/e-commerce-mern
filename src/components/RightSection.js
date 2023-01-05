@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default class RightSection extends Component {
   render() {
@@ -36,7 +37,7 @@ export default class RightSection extends Component {
       },
       {
         name: "Minds Eye Comics",
-        item: "Vans Classic Slip-On",
+        item: "Vans Old Skool",
         price: "$74.99",
         img: "https://i.imgur.com/AviwMth.png",
         alt: "Foot The Bill customs Vans for business Minds Eye Comics, located in Burnsville, Minnesota ",
@@ -55,12 +56,62 @@ export default class RightSection extends Component {
         img: "https://i.imgur.com/riJgphs.png",
         alt: "Foot The Bill customs Vans for business The Black Genius Art Show, located in Baltimore, Maryland",
       },
+      {
+        name: "Grog Shop",
+        item: "Vans Old Skool",
+        price: "$74.99",
+        img: "https://i.imgur.com/0pEDCCE.png",
+        alt: "Foot The Bill customs Vans for business Grog Shop, located in Cleveland, Ohio",
+      },
+      {
+        name: "606 Records",
+        item: "Vans Classic Slip-On",
+        price: "$74.99",
+        img: "https://i.imgur.com/T3m8C7O.png",
+        alt: "Foot The Bill customs Vans for business 606 Records, located in Chicago, Illinois",
+      },
+      {
+        name: "Alibi Lounge",
+        item: "Vans Sk8-Hi",
+        price: "$74.99",
+        img: "https://i.imgur.com/as4usL7.png",
+        alt: "Foot The Bill customs Vans for business Alibi Lounge, located in New York City",
+      },
+      {
+        name: "Mama Nature's Juice Bar",
+        item: "Vans Sk8-Hi",
+        price: "$74.99",
+        img: "https://i.imgur.com/9XPkIVn.png",
+        alt: "Foot The Bill customs Vans for business Mama Nature's Juice Bar, located in Ridgeland, Mississippi",
+      },
+      {
+        name: "Jensens Guitar and Music",
+        item: "Vans Old Skool",
+        price: "$74.99",
+        img: "https://i.imgur.com/46hDR6w.png",
+        alt: "Foot The Bill customs Vans for business Jensens Guitar and Music, located in Santa Barbara, California",
+      },
+      {
+        name: "Spacy Cloud",
+        item: "Vans Sk8-Hi",
+        price: "$74.99",
+        img: "https://i.imgur.com/yIrCOA9.png",
+        alt: "Foot The Bill customs Vans for business Spacy Cloud, located in Washington, DC",
+      },
+      {
+        name: "M.A.D.D",
+        item: "Vans Sk8-Hi",
+        price: "$74.99",
+        img: "https://i.imgur.com/s0QJPGk.png",
+        alt: "Foot The Bill customs Vans for business M.A.D.D. Rhythms, located in Chicago, Illinois",
+      },
     ];
+
     return (
       <>
         <div className="right-sec">
           <div className="carousel-container">
-            <Carousel className="carousel">
+            <Carousel className="homepage-carousel">
               {
                 // Put the loop inside the Carousel so the loop will wont make multiple copies of the Carousel
               }
@@ -78,6 +129,11 @@ export default class RightSection extends Component {
               })}
             </Carousel>
           </div>
+
+          {/* <FontAwesomeIcon icon={solid("user-secret")} />
+          <FontAwesomeIcon icon={regular("coffee")} />
+          <FontAwesomeIcon icon={icon({ name: "coffee", style: "solid" })} />
+          <FontAwesomeIcon icon={brands("twitter")} /> */}
         </div>
       </>
     );

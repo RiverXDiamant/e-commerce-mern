@@ -10,6 +10,7 @@ import { getUser } from "../../utilities/users-service";
 import AuthPage from "../AuthPage/AuthPage";
 import NewOrderPage from "../NewOrderPage";
 import UserLogOut from "../../components/UserLogOut";
+// import Footer from "../../components/Footer";
 
 // css
 import "../../index.scss";
@@ -20,6 +21,7 @@ export default function App() {
     <div className="App">
       <div className="header">
         <NavBar />
+
         {user ? (
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -43,6 +45,7 @@ export default function App() {
           </Routes>
         )}
       </div>
+      {/* <Footer /> */}
     </div>
   );
 }
